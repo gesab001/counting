@@ -6,15 +6,15 @@
 	              Thousands
 	          </div>
 	          <div class="number">
-	              0
+	              {{thousands}}
 	          </div>
 	      </div>
       	      <div class="unit">
       	      	  <div class="label">
 	              Hundreds
 	          </div>
-	          <div class="number">
-	              0
+	          <div class="number" >
+	              {{hundreds}}
 	          </div>
       	      </div>
       	      <div class="unit">
@@ -22,7 +22,7 @@
 	              Tens
 	          </div>
 	          <div class="number">
-	              0
+	              {{tens}}
 	          </div>
       	      </div>
       	      <div class="unit">
@@ -41,10 +41,10 @@
 	              Count by
 	          </div>
 	          <div class="steps">
- 		      <div class="number">0</div>
+ 		      <div class="number">{{steps}}</div>
  		      <div class="step-buttons">
- 		           <button class="button-step">Up</button>
- 		           <button class="button-step">Down</button>
+ 		           <button class="button-step"  (click)="stepUp()">Up</button>
+ 		           <button class="button-step"  (click)="stepDown()">Down</button>
  		      </div>
  		       
 	          </div>
