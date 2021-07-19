@@ -1,0 +1,71 @@
+<div class="main">
+	<div class="container">
+	   <div class="units-container">
+	      <div class="unit">
+	          <div class="label">
+	              Thousands
+	          </div>
+	          <div class="number">
+	              0
+	          </div>
+	      </div>
+      	      <div class="unit">
+      	      	  <div class="label">
+	              Hundreds
+	          </div>
+	          <div class="number">
+	              0
+	          </div>
+      	      </div>
+      	      <div class="unit">
+    	      	  <div class="label">
+	              Tens
+	          </div>
+	          <div class="number">
+	              0
+	          </div>
+      	      </div>
+      	      <div class="unit">
+    	      	  <div class="label">
+	              Ones
+	          </div>
+	          <div class="number">
+	              {{ones}}
+	          </div>      	      
+      	      </div>	   
+	   </div>
+
+	   <div class="settings-container">
+	      <div class="unit">
+	          <div class="label">
+	              Count by
+	          </div>
+	          <div class="steps">
+ 		      <div class="number">0</div>
+ 		      <div class="step-buttons">
+ 		           <button class="button-step">Up</button>
+ 		           <button class="button-step">Down</button>
+ 		      </div>
+ 		       
+	          </div>
+	      </div>
+      	      <div class="unit">
+      	      	  <div class="label">
+	              Add
+	          </div>
+
+	          <button class="button-step" (click)="add()">+</button>
+
+      	      </div>
+      	      <div class="unit">
+    	      	  <div class="label">
+	              Minus
+	          </div>
+
+	          <button class="button-step" (click)="minus()">-</button>
+
+      	      </div>	   
+	   </div>
+
+	</div>
+</div>
