@@ -1,0 +1,85 @@
+{
+  "configVersion": 1,
+  "timestamp": 1626700320096,
+  "index": "/counting/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/counting/favicon.ico",
+        "/counting/index.html",
+        "/counting/main.7ee453907917741d9df9.js",
+        "/counting/manifest.webmanifest",
+        "/counting/polyfills.dc29fbfc8738cacd6e34.js",
+        "/counting/runtime.24b0820fd838b93347b3.js",
+        "/counting/styles.31d6cfe0d16ae931b73c.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/counting/assets/icons/icon-128x128.png",
+        "/counting/assets/icons/icon-144x144.png",
+        "/counting/assets/icons/icon-152x152.png",
+        "/counting/assets/icons/icon-192x192.png",
+        "/counting/assets/icons/icon-384x384.png",
+        "/counting/assets/icons/icon-512x512.png",
+        "/counting/assets/icons/icon-72x72.png",
+        "/counting/assets/icons/icon-96x96.png",
+        "/counting/assets/mountain.jpg",
+        "/counting/mountain.f2b911265bbe458d68d4.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/counting/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/counting/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/counting/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/counting/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/counting/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/counting/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/counting/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/counting/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/counting/assets/mountain.jpg": "45d343529cd942df3fb4233ffd07495fa1013367",
+    "/counting/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/counting/index.html": "41b7dcd52dad0248623c775e9e24f493cd37c6b3",
+    "/counting/main.7ee453907917741d9df9.js": "b7ac7d76e2aa752d4189bb7305d98227b70a1ba5",
+    "/counting/manifest.webmanifest": "aa175d8d5a0e94beffab5301d65247656089782c",
+    "/counting/mountain.f2b911265bbe458d68d4.jpg": "45d343529cd942df3fb4233ffd07495fa1013367",
+    "/counting/polyfills.dc29fbfc8738cacd6e34.js": "f173b075a990e8225338327e3f12a40f5bb4787b",
+    "/counting/runtime.24b0820fd838b93347b3.js": "daaeb71546e4e02318d9ec4bad7766d926e30502",
+    "/counting/styles.31d6cfe0d16ae931b73c.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
