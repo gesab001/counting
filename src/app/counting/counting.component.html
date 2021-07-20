@@ -18,10 +18,10 @@
 	          </div>
       	      </div>
       	      <div class="unit">
-    	      	  <div class="label">
+    	      	  <div class="label" >
 	              Tens
 	          </div>
-	          <div class="number">
+	          <div class="number" id="tensNumber" max="1" contenteditable (input)="onUnitChange($event)">
 	              {{tens}}
 	          </div>
       	      </div>
@@ -29,7 +29,7 @@
     	      	  <div class="label">
 	              Ones
 	          </div>
-	          <div class="number">
+	          <div class="number" id="onesNumber" max="1" contenteditable>
 	              {{ones}}
 	          </div>      	      
       	      </div>	   
@@ -41,7 +41,7 @@
 	              Count by
 	          </div>
 	          <div class="steps">
- 		      <div class="number" contenteditable (input)="onStepsChange($event)">{{steps}}</div>
+ 		      <div class="number" id="stepNumber" contenteditable (input)="onStepsChange($event)">{{steps}}</div>
  		      <div class="step-buttons">
  		           <button class="button-step"  (click)="stepUp()">Up</button>
  		           <button class="button-step"  (click)="stepDown()">Down</button>

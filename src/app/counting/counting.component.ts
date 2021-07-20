@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-counting',
@@ -16,20 +16,34 @@ export class CountingComponent implements OnInit {
   steps = 1;
   constructor() { }
 
+
+ @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) { 
+     var key = event.key;
+     console.log(key);
+     if(key==="Enter"){
+        console.log("you pressed enter");
+        event.preventDefault();
+        this.steps = parseInt(document.getElementById("stepNumber").innerText);
+        var ones = document.getElementById("onesNumber").innerText;
+        var tens = document.getElementById("tensNumber").innerText;
+        var number = tens + ones;
+        this.count = parseInt(tens + ones);
+        console.log("count" + tens);
+     }  
+  }
+  
   ngOnInit(): void {
   }
 
   reset(){
-    this.steps = 1;
-    this.count = 0;
-    this.ones = "0";
-    this.tens = "0";
-    this.hundreds = "0";
-    this.thousands = "0";
+                      document.location.reload();
   }
   
   add(){
    // alert("hello");
+   this.steps = parseInt(document.getElementById("stepNumber").innerText);
+   
    for (var x=0; x<this.steps; x++){
           this.count = this.count + 1;
           var splitnumbers = this.count.toString().split("");
@@ -73,7 +87,7 @@ export class CountingComponent implements OnInit {
   
    minus(){
    // alert("hello");
-     console.log(this.count);
+   this.steps = parseInt(document.getElementById("stepNumber").innerText);
      for (var x=0; x<this.steps; x++){
        if(this.count>0)
          this.count = this.count - 1;
@@ -119,22 +133,29 @@ export class CountingComponent implements OnInit {
 
      }   
   }
-  
+ 
+ onUnitChange(event){
+    console.log(event.which);
+ } 
   
   onStepsChange(event){
    // alert (event.target.innerText);
-    this.steps = parseInt(event.target.innerText);
+   //this.steps = parseInt(event.target.innerText);
   }
   
   stepUp(){
     this.steps = this.steps + 1;
+    console.log(this.steps);
+    document.getElementById("stepNumber").innerText = this.steps.toString();
   }
   
   stepDown(){
     this.steps = this.steps - 1;
     if (this.steps<0){
        this.steps = 0;
-    }
+    }    
+    document.getElementById("stepNumber").innerText = this.steps.toString();
+    
   }
   
 }
