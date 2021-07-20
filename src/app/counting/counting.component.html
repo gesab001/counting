@@ -41,7 +41,7 @@
 	              Count by
 	          </div>
 	          <div class="steps">
- 		      <div class="number">{{steps}}</div>
+ 		      <div class="number" contenteditable (input)="onStepsChange($event)">{{steps}}</div>
  		      <div class="step-buttons">
  		           <button class="button-step"  (click)="stepUp()">Up</button>
  		           <button class="button-step"  (click)="stepDown()">Down</button>
@@ -65,6 +65,14 @@
 	          <button class="button-step" (click)="minus()">-</button>
 
       	      </div>	   
+      	      <div class="unit">
+    	      	  <div class="label">
+	              Reset
+	          </div>
+
+	          <button class="button-step" (click)="reset()">Reset</button>
+
+      	      </div>	 
 	   </div>
 
 	</div>

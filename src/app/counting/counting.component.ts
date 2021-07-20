@@ -19,6 +19,15 @@ export class CountingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  reset(){
+    this.steps = 1;
+    this.count = 0;
+    this.ones = "0";
+    this.tens = "0";
+    this.hundreds = "0";
+    this.thousands = "0";
+  }
+  
   add(){
    // alert("hello");
    for (var x=0; x<this.steps; x++){
@@ -37,20 +46,34 @@ export class CountingComponent implements OnInit {
             this.tens = splitnumbers[1];
             this.ones = splitnumbers[2]; 
         }         
-        else  if(splitnumbers.length==3){
-            this.thousands = splitnumbers[0];
-            this.hundreds = splitnumbers[1];
-            this.tens = splitnumbers[2];
-            this.ones = splitnumbers[3]; 
+        else  if(splitnumbers.length==4){
+            this.thousands = splitnumbers[splitnumbers.length-4];
+
+            this.hundreds = splitnumbers[splitnumbers.length-3];
+            this.tens = splitnumbers[splitnumbers.length-2];
+            this.ones = splitnumbers[splitnumbers.length-1] ; 
         }  
+        else  if(splitnumbers.length==5){
+            this.thousands = splitnumbers[splitnumbers.length-5] + splitnumbers[splitnumbers.length-4];
 
+            this.hundreds = splitnumbers[splitnumbers.length-3];
+            this.tens = splitnumbers[splitnumbers.length-2];
+            this.ones = splitnumbers[splitnumbers.length-1] ; 
+        }  
+        else  if(splitnumbers.length==6){
+            this.thousands = splitnumbers[splitnumbers.length-6] + splitnumbers[splitnumbers.length-5] + splitnumbers[splitnumbers.length-4];
 
+            this.hundreds = splitnumbers[splitnumbers.length-3];
+            this.tens = splitnumbers[splitnumbers.length-2];
+            this.ones = splitnumbers[splitnumbers.length-1] ; 
+        } 
 	  
     }
   }
   
    minus(){
    // alert("hello");
+     console.log(this.count);
      for (var x=0; x<this.steps; x++){
        if(this.count>0)
          this.count = this.count - 1;
@@ -58,6 +81,9 @@ export class CountingComponent implements OnInit {
 
           if(splitnumbers.length==1){
            this.ones = splitnumbers[0];
+           this.tens = "0";
+           this.hundreds = "0";
+           this.thousands = "0";
            }
         else if(splitnumbers.length==2){
             this.tens = splitnumbers[0];
@@ -68,14 +94,36 @@ export class CountingComponent implements OnInit {
             this.tens = splitnumbers[1];
             this.ones = splitnumbers[2]; 
         }         
-        else  if(splitnumbers.length==3){
-            this.thousands = splitnumbers[0];
-            this.hundreds = splitnumbers[1];
-            this.tens = splitnumbers[2];
-            this.ones = splitnumbers[3]; 
+        else  if(splitnumbers.length==4){
+            this.thousands = splitnumbers[splitnumbers.length-4];
+
+            this.hundreds = splitnumbers[splitnumbers.length-3];
+            this.tens = splitnumbers[splitnumbers.length-2];
+            this.ones = splitnumbers[splitnumbers.length-1] ; 
         }  
+        else  if(splitnumbers.length==5){
+            this.thousands = splitnumbers[splitnumbers.length-5] + splitnumbers[splitnumbers.length-4];
+
+            this.hundreds = splitnumbers[splitnumbers.length-3];
+            this.tens = splitnumbers[splitnumbers.length-2];
+            this.ones = splitnumbers[splitnumbers.length-1] ; 
+        }  
+        else  if(splitnumbers.length==6){
+            this.thousands = splitnumbers[splitnumbers.length-6] + splitnumbers[splitnumbers.length-5] + splitnumbers[splitnumbers.length-4];
+
+            this.hundreds = splitnumbers[splitnumbers.length-3];
+            this.tens = splitnumbers[splitnumbers.length-2];
+            this.ones = splitnumbers[splitnumbers.length-1] ; 
+        } 
+	  
 
      }   
+  }
+  
+  
+  onStepsChange(event){
+   // alert (event.target.innerText);
+    this.steps = parseInt(event.target.innerText);
   }
   
   stepUp(){

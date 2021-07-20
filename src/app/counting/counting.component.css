@@ -50,15 +50,15 @@
   border-style: solid;
   padding: 10px;
   font-size: 5vw;
-  width: 40%;
   text-align: center;
 }
 
 .steps{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    justify-content: space-between;
    width: 100%;
+   align-items: center;
 }
 
 .step-buttons{
