@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1626792093549,
+  "timestamp": 1626794710828,
   "index": "/counting/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/counting/favicon.ico",
         "/counting/index.html",
-        "/counting/main.8cfd9f409354f79a016b.js",
+        "/counting/main.6c888e6f8f90cdfbcc25.js",
         "/counting/manifest.webmanifest",
         "/counting/polyfills.dc29fbfc8738cacd6e34.js",
         "/counting/runtime.24b0820fd838b93347b3.js",
@@ -65,8 +65,8 @@
     "/counting/assets/icons/icon-96x96.png": "564b1ba27c443388cf8a3df1e2f46e1123b1e7a1",
     "/counting/assets/mountain.jpg": "45d343529cd942df3fb4233ffd07495fa1013367",
     "/counting/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/counting/index.html": "815d91ff579e8f3764749f834bdeefb707638acf",
-    "/counting/main.8cfd9f409354f79a016b.js": "fbf7baac962b7a6237d5d09ef08cb4e1f0c596a1",
+    "/counting/index.html": "9b8dc55f400305c2ae25bb057808437d6e644de0",
+    "/counting/main.6c888e6f8f90cdfbcc25.js": "c399a785e5b5a4f441448b7d00e46107cac73b98",
     "/counting/manifest.webmanifest": "aa175d8d5a0e94beffab5301d65247656089782c",
     "/counting/mountain.f2b911265bbe458d68d4.jpg": "45d343529cd942df3fb4233ffd07495fa1013367",
     "/counting/polyfills.dc29fbfc8738cacd6e34.js": "f173b075a990e8225338327e3f12a40f5bb4787b",
